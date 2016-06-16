@@ -55,7 +55,7 @@ export interface Callbacks {
 
 export class Tokenizer {
 
-  constructor (options: TokenizerOptions, cbs: Callbacks);
+  constructor (options: TokenizerOptions | void, cbs: Callbacks);
 
   write (chunk: string | Buffer): void;
   pause (): void;
@@ -67,7 +67,7 @@ export class Tokenizer {
 
 export class Parser extends EventEmitter implements Callbacks {
 
-  constructor (cbs: Callbacks, options: ParserOptions);
+  constructor (cbs: Callbacks, options?: ParserOptions);
 
   ontext (text: string): void;
   onopentagname (name: string): void;
@@ -98,13 +98,13 @@ export class Parser extends EventEmitter implements Callbacks {
 
 export class WritableStream extends Writable {
 
-  constructor (cbs: Callbacks, options: ParserOptions);
+  constructor (cbs: Callbacks, options?: ParserOptions);
 
 }
 
 export class Stream extends WritableStream {
 
-  constructor (options: ParserOptions);
+  constructor (options?: ParserOptions);
 
   readable: boolean;
 
