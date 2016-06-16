@@ -1,0 +1,9 @@
+{
+  "name": "htmlparser2",
+  "homepage": "https://github.com/fb55/htmlparser2",
+  "main": "lib/index.d.ts",
+  "version": "^3.9.0",
+  "globalDevDependencies": {
+    "node": "registry:env/node#4.0.0+20160507210304"
+  }
+}
